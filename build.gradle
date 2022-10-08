@@ -127,6 +127,23 @@ dependencies {
     implementation "org.apereo.cas:cas-server-core-api-configuration-model"
     implementation "org.apereo.cas:cas-server-webapp-init"
 
+    implementation "org.apereo.cas:cas-server-support-reports:${project.'cas.version'}"
+    // 支持rest
+    implementation "org.apereo.cas:cas-server-support-rest:${project.'cas.version'}"
+    implementation "org.apereo.cas:cas-server-support-rest-services:${project.'cas.version'}"
+    // 用json来注册服务
+    implementation "org.apereo.cas:cas-server-support-json-service-registry:${project.'cas.version'}"
+//    implementation "org.apereo.cas:cas-server-support-redis-service-registry:${project.'cas.version'}"
+
+    // 集成mysql
+    implementation "org.apereo.cas:cas-server-support-jdbc:${project.'cas.version'}"
+    implementation "org.apereo.cas:cas-server-support-jdbc-drivers:${project.'cas.version'}"
+    implementation "org.apereo.cas:cas-server-support-jpa-hibernate:${project.'cas.version'}"
+
+    // 记录事件数据
+//    implementation "org.apereo.cas:cas-server-core-events:${project.'cas.version'}"
+    // 存储到redis
+//    implementation "org.apereo.cas:cas-server-support-events-redis:${project.'cas.version'}"
     if (project.hasProperty("casModules")) {
         def dependencies = project.getProperty("casModules").split(",")
         dependencies.each {

@@ -1,0 +1,6 @@
+{
+  "@class" : "org.apereo.cas.services.CasRegisteredService",
+  "serviceId": "http://localhost:9007",
+  "name" : "test",
+  "id" : 10000001
+}
